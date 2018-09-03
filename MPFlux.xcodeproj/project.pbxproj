@@ -13,6 +13,8 @@
 		0DA1FC67213CDEC400D63FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA1FC66213CDEC400D63FC7 /* Assets.xcassets */; };
 		0DA1FC6A213CDEC400D63FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA1FC68213CDEC400D63FC7 /* LaunchScreen.storyboard */; };
 		0DA1FC6D213CDEC400D63FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1FC6C213CDEC400D63FC7 /* main.m */; };
+		0DA1FC76213CDEE400D63FC7 /* MPFluxStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1FC75213CDEE400D63FC7 /* MPFluxStream.m */; };
+		0DA1FC79213CE9A600D63FC7 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1FC78213CE9A600D63FC7 /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		0DA1FC69213CDEC400D63FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA1FC6B213CDEC400D63FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA1FC6C213CDEC400D63FC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DA1FC74213CDEE400D63FC7 /* MPFluxStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFluxStream.h; sourceTree = "<group>"; };
+		0DA1FC75213CDEE400D63FC7 /* MPFluxStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFluxStream.m; sourceTree = "<group>"; };
+		0DA1FC77213CE9A600D63FC7 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		0DA1FC78213CE9A600D63FC7 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 		0DA1FC51213CDEC300D63FC7 = {
 			isa = PBXGroup;
 			children = (
+				0DA1FC73213CDEE400D63FC7 /* Flux */,
 				0DA1FC5C213CDEC300D63FC7 /* MPFlux */,
 				0DA1FC5B213CDEC300D63FC7 /* Products */,
 			);
@@ -62,6 +69,8 @@
 				0DA1FC5E213CDEC300D63FC7 /* AppDelegate.m */,
 				0DA1FC60213CDEC300D63FC7 /* ViewController.h */,
 				0DA1FC61213CDEC300D63FC7 /* ViewController.m */,
+				0DA1FC77213CE9A600D63FC7 /* UserViewController.h */,
+				0DA1FC78213CE9A600D63FC7 /* UserViewController.m */,
 				0DA1FC63213CDEC300D63FC7 /* Main.storyboard */,
 				0DA1FC66213CDEC400D63FC7 /* Assets.xcassets */,
 				0DA1FC68213CDEC400D63FC7 /* LaunchScreen.storyboard */,
@@ -69,6 +78,15 @@
 				0DA1FC6C213CDEC400D63FC7 /* main.m */,
 			);
 			path = MPFlux;
+			sourceTree = "<group>";
+		};
+		0DA1FC73213CDEE400D63FC7 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				0DA1FC74213CDEE400D63FC7 /* MPFluxStream.h */,
+				0DA1FC75213CDEE400D63FC7 /* MPFluxStream.m */,
+			);
+			path = Flux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA1FC62213CDEC300D63FC7 /* ViewController.m in Sources */,
+				0DA1FC79213CE9A600D63FC7 /* UserViewController.m in Sources */,
+				0DA1FC76213CDEE400D63FC7 /* MPFluxStream.m in Sources */,
 				0DA1FC6D213CDEC400D63FC7 /* main.m in Sources */,
 				0DA1FC5F213CDEC300D63FC7 /* AppDelegate.m in Sources */,
 			);
@@ -285,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPFlux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPFlux/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
