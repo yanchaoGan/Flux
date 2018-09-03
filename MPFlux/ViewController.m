@@ -26,6 +26,7 @@
     [super viewDidLoad];
     
     __weak ViewController *weakSelf = self;
+    /*
     //way1
     MPFluxActionOption *option = MPFluxActionOption.alloc.init;
     [option addObserver:^(MPFluxActionOption *option) {
@@ -43,10 +44,9 @@
     [option commit:^id(MPFluxActionOption *option, id dataOld) {
         return @"this is flux demo";
     }];
-
-    /*
-     
-    //way2
+     */
+    
+//    way2
     MPFluxDataSource.shareInstance
     .addAction(MPFluxAction.new,@"global_action_key")
     .addOption(MPFluxActionOption.new,@"option_key")
@@ -61,15 +61,14 @@
     .commit(^(MPFluxActionOption *option, id dataOld){
         return @"this is flux demo";
     });
-     
-     */
+
     
 }
 
 - (IBAction)onchange:(id)sender {
     MPFluxActionOption *option = [[MPFluxDataSource.shareInstance actionForKey:@"global_action_key"] optionForKey:@"option_key"];
     [option commit:^id(MPFluxActionOption *option, id dataOld) {
-        return @"home chage title";
+        return @"home had chage title";
     }];
 }
 
