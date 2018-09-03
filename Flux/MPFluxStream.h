@@ -22,6 +22,12 @@ typedef id (^MPCommit)(MPFluxActionOption *option, id dataOld);
 
 - (void)clear;
 
+//fp support
+- (MPFluxAction *(^)(MPFluxAction *action, NSString *key))addAction;
+- (void(^)(NSString *key))removeAction;
+- (MPFluxAction *(^)(NSString *key))action;
+
+
 @end
 
 //action . for special vc or view
@@ -30,6 +36,11 @@ typedef id (^MPCommit)(MPFluxActionOption *option, id dataOld);
 - (void)addOption:(MPFluxActionOption *)option forKey:(NSString *)key;
 - (void)removeOptionForKey:(NSString *)key;
 - (MPFluxActionOption *)optionForKey:(NSString *)key;
+
+//fp support
+- (MPFluxActionOption *(^)(MPFluxActionOption *option, NSString *key))addOption;
+- (void(^)(NSString *key))removeOption;
+- (MPFluxActionOption *(^)(NSString *key))option;
 
 @end
 
@@ -45,5 +56,11 @@ typedef id (^MPCommit)(MPFluxActionOption *option, id dataOld);
 - (void)removeObserverForKey:(NSString *)key;
 
 - (void)commit:(MPCommit)change;
+
+//fp support
+- (void(^)(MPObserver observer, NSString *key))addObserver;
+- (void(^)(NSString *key))removeObserver;
+- (void(^)(MPCommit change))commit;
+
 @end
 

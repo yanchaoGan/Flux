@@ -18,6 +18,8 @@
 - (void)dealloc
 {
     NSLog(@"%s",__func__);
+    MPFluxActionOption *option = [[MPFluxDataSource.shareInstance actionForKey:@"global_action_key"] optionForKey:@"option_key"];
+    [option removeObserverForKey:@"obv2_key"];
 }
 
 - (void)viewDidLoad {
@@ -33,10 +35,11 @@
 }
 
 - (IBAction)onChange:(id)sender {
-    
+    static int time;
+    time ++;
     MPFluxActionOption *option = [[MPFluxDataSource.shareInstance actionForKey:@"global_action_key"] optionForKey:@"option_key"];
     [option commit:^id(MPFluxActionOption *option, id dataOld) {
-        return @"i change the title";
+        return [@"i change the title " stringByAppendingFormat:@"%zi",time];
     }];
 }
 
