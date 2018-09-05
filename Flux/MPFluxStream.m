@@ -127,7 +127,9 @@
 
 - (void)addObserver:(MPObserver)observer forKey:(NSString *)key {
     _Observers[key] = observer;
-    [self _postNotify];
+    if (observer) {
+        observer(self);
+    }
 }
 
 - (void)removeObserverForKey:(NSString *)key {

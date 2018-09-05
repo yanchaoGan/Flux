@@ -2,7 +2,7 @@
 
 ## 什么是Flux
 
-https://facebook.github.io/flux/docs/dispatcher.html#content
+https://facebook.github.io/flux/docs/dispatcher.html#content  
 http://www.ruanyifeng.com/blog/2016/01/flux.html
 
 Flux 的最大特点，就是数据的"单向流动"。
